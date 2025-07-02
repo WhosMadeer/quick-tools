@@ -1,20 +1,17 @@
-# Reanimated example
+# Quick Tools
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-</p>
+I created this app quickly to learn about **React Native** in a fun way. This app taught me how to use the tab router and device sensors to control the app.
 
-## 🚀 How to use
+## Features
 
-> `npx create-expo my-app --example with-reanimated`
+The features that I added to this app were
 
-- Run `yarn` or `npm install`
-- Run `yarn start` or `npm run start` to try it out.
+-   Spin the bottle
+-   Flip a coin
+-   Pull from a deck of cards
 
-## 📝 Notes
+The libraries that I used were
 
-- [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
+-   React Native Reanimated
+-   React Native Gesture Handler
+-   Lucide Icons

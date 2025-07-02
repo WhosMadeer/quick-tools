@@ -27,8 +27,8 @@ export default function SpinTheBottle() {
     };
 
     const config = {
-        duration: Math.floor(Math.random() * progress.value),
-        easing: Easing.out(Easing.quad),
+        duration: Math.floor((Math.random() * progress.value) / 1000),
+        easing: Easing.inOut(Easing.quad),
     };
 
     const animatedStyle = useAnimatedStyle(() => ({
@@ -52,7 +52,7 @@ export default function SpinTheBottle() {
                     (1 / 2);
 
                 // console.log(magnitude);
-                if (Math.abs(magnitude) > 75) {
+                if (Math.abs(magnitude) > 50) {
                     handleRotate();
                 }
             }

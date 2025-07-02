@@ -10,6 +10,17 @@
   "expo": {
     "web": {
       "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "557d3b67-643a-41c6-8915-caae8053866d"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.madeer.quicktools",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     }
   }
 }

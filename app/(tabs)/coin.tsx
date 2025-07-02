@@ -17,9 +17,6 @@ import Animated, {
     withTiming,
 } from "react-native-reanimated";
 
-const HeadsCoinFlipper = Animated.createAnimatedComponent(CircleUserRound);
-const TailsCoinFlipper = Animated.createAnimatedComponent(CircleDollarSign);
-
 const TIME = 1000;
 
 export default function FlipACoin() {

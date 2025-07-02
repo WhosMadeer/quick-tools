@@ -5,7 +5,7 @@ import { Stack } from "expo-router";
 export default function RootLayout() {
     return (
         <GestureHandlerRootView className="flex-1">
-            <Stack>
+            <Stack screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="(tabs)" />
             </Stack>
         </GestureHandlerRootView>
