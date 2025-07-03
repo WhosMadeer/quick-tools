@@ -29,6 +29,7 @@ export default function DrawACard() {
             if (number === 11) value = "J";
             else if (number === 12) value = "Q";
             else if (number === 13) value = "K";
+            else if (number === 1) value = "A";
 
             const suite =
                 CardIconList[Math.floor(Math.random() * CardIconList.length)];

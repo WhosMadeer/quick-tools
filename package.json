@@ -2,6 +2,7 @@
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
     "expo": "53.0.16",
+    "expo-dev-client": "~5.2.3",
     "expo-linking": "~7.1.6",
     "expo-router": "^5.1.2",
     "expo-sensors": "~14.1.4",

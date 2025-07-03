@@ -1,14 +1,14 @@
-import Animated, {
-    withTiming,
-    useAnimatedStyle,
-    Easing,
-    useSharedValue,
-} from "react-native-reanimated";
-import { View, Button, Text } from "react-native";
-import { BottleWine } from "lucide-react-native";
 import { DeviceMotion } from "expo-sensors";
-import { Slider } from "react-native-awesome-slider";
+import { BottleWine } from "lucide-react-native";
 import { useEffect } from "react";
+import { Button, View } from "react-native";
+import { Slider } from "react-native-awesome-slider";
+import Animated, {
+    Easing,
+    useAnimatedStyle,
+    useSharedValue,
+    withTiming,
+} from "react-native-reanimated";
 
 const BottleSpinner = Animated.createAnimatedComponent(BottleWine);
 
@@ -23,24 +23,23 @@ export default function SpinTheBottle() {
 
     // rotate randomly on press
     const handleRotate = () => {
-        rotation.value += Math.floor(Math.random() * progress.value);
-    };
-
-    const config = {
-        duration: Math.floor((Math.random() * progress.value) / 1000),
-        easing: Easing.inOut(Easing.quad),
+        const angle = Math.floor(Math.random() * progress.value);
+        rotation.value = withTiming(rotation.value + angle, {
+            duration: 1000 + (angle / 360) * 50,
+            easing: Easing.inOut(Easing.quad),
+        });
     };
 
     const animatedStyle = useAnimatedStyle(() => ({
-        transform: [{ rotate: withTiming(`${rotation.value}deg`, config) }],
+        transform: [{ rotateZ: `${rotation.value}deg` }],
     }));
 
     useEffect(() => {
         DeviceMotion.addListener((device) => {
             /*
-              alpha is around Z axis
-              beta for X axis
-              gamma for Y axis. 
+                alpha is around Z axis
+                beta for X axis
+                gamma for Y axis. 
             */
 
             if (device.acceleration) {

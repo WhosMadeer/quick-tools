@@ -21,6 +21,9 @@
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
+    },
+    "android": {
+      "package": "com.madeer.quicktools"
     }
   }
 }
